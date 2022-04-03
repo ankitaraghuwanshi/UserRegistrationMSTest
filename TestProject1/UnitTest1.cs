@@ -60,5 +60,20 @@ namespace UserRegistrationTesting
                 Assert.AreEqual(expected, result);
             }
         }
+        [Test]
+        public void ValidPassWord()
+        {
+            string result = null;
+            string expected = "Password should contain atleast eight characters";
+            try
+            {
+                string password = "passwords";
+                result = validation.ValidPasswordEightChars(password);
+            }
+            catch (Exception)
+            {
+                Assert.AreEqual(expected, result);
+            }
+        }
     }
-}
+}         
