@@ -41,6 +41,11 @@ namespace UserRegistrationMSTesting
                             input = Console.ReadLine();
                             userRegistration.ValidPasswordRule_1(input);
                             break;
+                        case 6:
+                            Console.WriteLine("Enter Password: ");
+                            input = Console.ReadLine();
+                            userRegistration.ValidPasswordRule_2(input);
+                            break;
                         default:
                             Console.WriteLine("Choose From the Options given above");
                             break;
