@@ -45,5 +45,20 @@ namespace UserRegistrationTesting
                 Assert.AreEqual(expected, result);
             }
         }
+        [Test]
+        public void ValidPhone()
+        {
+            string expected = "Phone number is Valid";
+            string result = null;
+            try
+            {
+                string phone = "1234567890";
+                result = validation.ValidPhoneNumber(phone);
+            }
+            catch (Exception)
+            {
+                Assert.AreEqual(expected, result);
+            }
+        }
     }
 }

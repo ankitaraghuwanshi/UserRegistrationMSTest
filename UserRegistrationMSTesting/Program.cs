@@ -31,6 +31,11 @@ namespace UserRegistrationMSTesting
                             input = Console.ReadLine();
                             userRegistration.ValidEmail(input);
                             break;
+                        case 4:
+                            Console.WriteLine("Enter your Mobile Number: ");
+                            input = Console.ReadLine();
+                            userRegistration.ValidMobile(input);
+                            break;
                         default:
                             Console.WriteLine("Choose From the Options given above");
                             break;
