@@ -15,6 +15,7 @@ namespace UserRegistrationMSTesting
 
             Name_Empty,
             Name_Less_Than_Three,
+            Name_Start_With_Upper_Case,
 
         }
         public UserValidationCustomException(ExceptionType type, string message) : base(message)

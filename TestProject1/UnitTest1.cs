@@ -18,8 +18,16 @@ namespace UserRegistrationTesting
         public void ValidFirst()
         {
             string expected = "First Name is Valid";
-            string name = "Sankalp";
+            string name = "Ankita";
             string result = validation.ValidFirstName(name);
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void ValidLastName()
+        {
+            string expected = "Last Name is Valid";
+            string name = "Ankita";
+            string result = validation.ValidLastName(name);
             Assert.AreEqual(expected, result);
         }
     }
