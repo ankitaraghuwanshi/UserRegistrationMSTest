@@ -67,5 +67,13 @@ namespace UserRegistrationMSTesting
             else
                 Console.WriteLine($"{password} is Invalid");
         }
+        public void ValidPasswordRule_3(string password)
+        {
+            Console.WriteLine("Password - " + password);
+            if (PasswordRegex_3.IsMatch(password))
+                Console.WriteLine($"{password} is valid");
+            else
+                Console.WriteLine($"{password} is Invalid");
+        }
     }
 }

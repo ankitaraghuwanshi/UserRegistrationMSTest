@@ -153,7 +153,7 @@ namespace UserRegistrationMSTesting
         }
         public string ValidPasswordOneUpperCase(string password)
         {
-            bool Password(string Password) => PasswordRegex_3.IsMatch(Password);
+            bool Password(string Password) => PasswordRegex_2.IsMatch(Password);
             bool result = Password(password);
             try
             {
@@ -165,6 +165,29 @@ namespace UserRegistrationMSTesting
                     else if (!char.IsUpper(password[1]))
                         throw new UserValidationCustomException(UserValidationCustomException.ExceptionType.Password_AtLeast_OneUpperCase,
                             "Password should contain atleast one upper case character");
+                }
+                else return "Password is Valid";
+            }
+            catch (UserValidationCustomException exception)
+            {
+                throw exception;
+            }
+            return "Password is Invalid";
+        }
+        public string ValidPasswordAtLeastOneNumber(string password)
+        {
+            bool Password(string Password) => PasswordRegex_3.IsMatch(Password);
+            bool result = Password(password);
+            try
+            {
+                if (result == false)
+                {
+                    if (password.Equals(string.Empty))
+                        throw new UserValidationCustomException(UserValidationCustomException.ExceptionType.Password_Empty,
+                            "Password should not be empty");
+                    else if (!char.IsUpper(password[1]))
+                        throw new UserValidationCustomException(UserValidationCustomException.ExceptionType.Password_AtLeast_OneNumber,
+                            "Password should contain atleast one Digit");
                 }
                 else return "Password is Valid";
             }
