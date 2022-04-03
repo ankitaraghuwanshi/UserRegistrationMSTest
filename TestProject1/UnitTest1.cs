@@ -30,5 +30,20 @@ namespace UserRegistrationTesting
             string result = validation.ValidLastName(name);
             Assert.AreEqual(expected, result);
         }
+        [Test]
+        public void ValidEmail()
+        {
+            string expected = "Email is Valid";
+            string result = null;
+            string email = "kaithwas.123@something.com";
+            try
+            {
+                result = validation.ValidEmail(email);
+            }
+            catch (Exception)
+            {
+                Assert.AreEqual(expected, result);
+            }
+        }
     }
 }

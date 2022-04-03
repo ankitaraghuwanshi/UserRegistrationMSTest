@@ -26,6 +26,11 @@ namespace UserRegistrationMSTesting
                             input = Console.ReadLine();
                             userRegistration.ValidLastName(input);
                             break;
+                        case 3:
+                            Console.WriteLine("Enter your Email: ");
+                            input = Console.ReadLine();
+                            userRegistration.ValidEmail(input);
+                            break;
                         default:
                             Console.WriteLine("Choose From the Options given above");
                             break;
