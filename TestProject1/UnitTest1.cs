@@ -35,7 +35,7 @@ namespace UserRegistrationTesting
         {
             string expected = "Email is Valid";
             string result = null;
-            string email = "kaithwas.123@something.com";
+            string email = "bittanraghu@gmail.com";
             try
             {
                 result = validation.ValidEmail(email);
